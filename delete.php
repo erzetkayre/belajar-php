@@ -1,7 +1,7 @@
 <?php 
     include('service/conn.php');
-    $id_santri = $_GET['id'];
-    $delete = "DELETE FROM santri WHERE id=$id_santri";
+    $id = $_GET["id"];
+    $delete = "DELETE FROM santri WHERE id=$id";
 
     $result = mysqli_query($conn,$delete);
     if ($result) {

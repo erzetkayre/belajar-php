@@ -12,6 +12,12 @@
             '.$msg.'
             </div>';
         };
+        if(isset($_GET['clear'])) {
+            $clear =$_GET['clear'];
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            '.$clear.'
+            </div>';
+        };
     ?>
     <h4 class="text-start">Tabel Santri</h4>
     <table class="table">
@@ -39,7 +45,7 @@
                 <td><?= $ambil["alamat"]?></td>
                 <td>
                     <a class="btn btn-warning btn-sm" href=""><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                    <a class="btn btn-danger btn-sm" href="delete.php"><i class="fa-solid fa-trash"></i> Delete</a>
+                    <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $ambil['id']?>"><i class="fa-solid fa-trash"></i> Delete</a>
                 </td>
             </tr>
         </tbody>
