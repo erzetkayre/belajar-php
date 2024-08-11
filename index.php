@@ -1,4 +1,5 @@
 <?php
+    include 'layouts/navbar.php';
     include 'service/conn.php';
     if(isset($_POST['submit'])){
         $nama = $_POST['nama'];
@@ -9,7 +10,7 @@
         $result = mysqli_query($conn,$tembak);
 
         if($result){ 
-            echo "Data berhasil dimasukkan";
+            header("Location: home.php?msg=Data Santri Berhasil Dimasukkan.");
         } else {
             die(mysqli_error($conn));    
         }
